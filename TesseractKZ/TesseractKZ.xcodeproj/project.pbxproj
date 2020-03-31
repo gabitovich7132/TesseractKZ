@@ -3,11 +3,13 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		2B4048CAD5C8823C4E82D03E /* Pods_TesseractKZ.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C23F4D395862ADEA687288A /* Pods_TesseractKZ.framework */; };
+		CB6A57BF24337B9900E88B07 /* tessdata in Resources */ = {isa = PBXBuildFile; fileRef = CB6A57BE24337B9900E88B07 /* tessdata */; };
+		CBCEDCD324337D2F005A00B0 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBCEDCD224337D2F005A00B0 /* RootView.swift */; };
 		CBE571D324337635006C5DFC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBE571D224337635006C5DFC /* AppDelegate.swift */; };
 		CBE571DC24337639006C5DFC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CBE571DB24337639006C5DFC /* Assets.xcassets */; };
 		CBE571DF24337639006C5DFC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CBE571DD24337639006C5DFC /* LaunchScreen.storyboard */; };
@@ -17,6 +19,8 @@
 /* Begin PBXFileReference section */
 		0C23F4D395862ADEA687288A /* Pods_TesseractKZ.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TesseractKZ.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		667C8E9ABE8804FBD407FD09 /* Pods-TesseractKZ.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TesseractKZ.debug.xcconfig"; path = "Target Support Files/Pods-TesseractKZ/Pods-TesseractKZ.debug.xcconfig"; sourceTree = "<group>"; };
+		CB6A57BE24337B9900E88B07 /* tessdata */ = {isa = PBXFileReference; lastKnownFileType = folder; path = tessdata; sourceTree = "<group>"; };
+		CBCEDCD224337D2F005A00B0 /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
 		CBE571CF24337635006C5DFC /* TesseractKZ.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TesseractKZ.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CBE571D224337635006C5DFC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CBE571DB24337639006C5DFC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -55,6 +59,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		CBCEDCD124337D23005A00B0 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				CBCEDCD224337D2F005A00B0 /* RootView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		CBE571C624337635006C5DFC = {
 			isa = PBXGroup;
 			children = (
@@ -78,6 +90,7 @@
 			children = (
 				CBE571D224337635006C5DFC /* AppDelegate.swift */,
 				CBE571E024337639006C5DFC /* Info.plist */,
+				CB6A57BE24337B9900E88B07 /* tessdata */,
 				CBE571EA243376B2006C5DFC /* Controller */,
 				CBE571E9243376AB006C5DFC /* Resource */,
 				CBE571E8243376A4006C5DFC /* LaunchScreen */,
@@ -105,6 +118,7 @@
 			isa = PBXGroup;
 			children = (
 				CBE571E62433769B006C5DFC /* TestViewController.swift */,
+				CBCEDCD124337D23005A00B0 /* View */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -120,6 +134,7 @@
 				CBE571CB24337635006C5DFC /* Sources */,
 				CBE571CC24337635006C5DFC /* Frameworks */,
 				CBE571CD24337635006C5DFC /* Resources */,
+				10971623E6A07859D19D9439 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -170,12 +185,30 @@
 			files = (
 				CBE571DF24337639006C5DFC /* LaunchScreen.storyboard in Resources */,
 				CBE571DC24337639006C5DFC /* Assets.xcassets in Resources */,
+				CB6A57BF24337B9900E88B07 /* tessdata in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		10971623E6A07859D19D9439 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TesseractKZ/Pods-TesseractKZ-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TesseractKZ/Pods-TesseractKZ-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TesseractKZ/Pods-TesseractKZ-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		9F27CBC17B8A355DA111FC52 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -207,6 +240,7 @@
 			files = (
 				CBE571E72433769B006C5DFC /* TestViewController.swift in Sources */,
 				CBE571D324337635006C5DFC /* AppDelegate.swift in Sources */,
+				CBCEDCD324337D2F005A00B0 /* RootView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

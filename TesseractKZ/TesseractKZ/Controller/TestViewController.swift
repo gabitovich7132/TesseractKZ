@@ -10,19 +10,17 @@ import UIKit
 
 class TestViewController: UIViewController {
     
+    private var rootView: RootView { return self.view as! RootView }
+    
+    override func loadView() {
+        self.view = RootView()
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        configureView()
-        configureNavigation()
+
     }
     
-    private func configureView() {
-        view.backgroundColor = UIColor.white
-    }
     
-    private func configureNavigation() {
-        navigationItem.title = "Tesseract Test Data"
-    }
     
 }
